@@ -1,14 +1,15 @@
 <?php
-echo showUserIp();
+echo showMyIp();
 
 /**
 * 取得目前的IP位址
 *
 * @return string
 */
-function showUserIp()
+function showMyIp()
 {
-	if (isset($_SERVER)) {
+	if (isset($_SERVER)) 
+	{
 		if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 			$realip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 		} elseif (isset($_SERVER['HTTP_CLIENT_IP'])) {
